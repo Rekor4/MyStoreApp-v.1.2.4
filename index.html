@@ -1,0 +1,210 @@
+<!--Тут можно посмотреть, как на JS отправлять POST-запрос: https://www.youtube.com/watch?v=PqTrhfjLQBI-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="modal.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<section class="product">
+    <div class="product__info">
+        <div class="container">
+            <h1 class="product__title">Каталог</h1>
+            <h1 class="product__title product__title--gray">8 товаров</h1>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/iphone-14-pro-max-gold.png"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">135 000</div>
+                    <div class="card__price card__price--common">150 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+                </a>
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/samsung-s22-black.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">90 000</div>
+                    <div class="card__price card__price--common">100 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Смартфон Samsung Galaxy S22 Ultra 256Gb, черный фантом
+                </a>
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/xiaomi-12x-purple.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">72 000</div>
+                    <div class="card__price card__price--common">80 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Смартфон Xiaomi 12X 256Gb, фиолетовый
+                </a>
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/poco-f4-gt-yellow.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">54 000</div>
+                    <div class="card__price card__price--common">60 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Смартфон Xiaomi Poco F4 GT 128Gb, желтый
+                </a>
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/macbook-10-gray.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">270 000</div>
+                    <div class="card__price card__price--common">300 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Ноутбук Apple MacBook Pro 10, 512ГБ SSD, серый космос
+                </a>
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/msi-15-white.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">90 000</div>
+                    <div class="card__price card__price--common">100 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Ноутбук MSI Sword 15, 512ГБ SSD, белый</a
+                >
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/acer-3-gray.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">72 000</div>
+                    <div class="card__price card__price--common">80 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Ультрабук Acer Swift 3, 512ГБ SSD, серый</a
+                >
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__top">
+                <a href="#" class="card__image">
+                    <img
+                            src="./images/lenovo-3-gray.jpg"
+                            alt="Apple IPhone 14 PRO Max Gold"
+                    />
+                </a>
+                <div class="card__label">-10%</div>
+            </div>
+            <div class="card__bottom">
+                <div class="card__prices">
+                    <div class="card__price card__price--discount">45 000</div>
+                    <div class="card__price card__price--common">50 000</div>
+                </div>
+                <a href="#" class="card__title">
+                    Lenovo IdeaPad 3, 256ГБ SSD, серый</a
+                >
+                <button onclick="showModal()" class="card__add">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Введите ваши контактные данные:</p>
+        <input type="text" class="input input_firstname"  placeholder="Имя" maxlength="15">
+        <input type="text"  class="input input_lastname" placeholder="Фамилия" maxlength="15">
+        <input type="text"  class="input input_fathername" placeholder="Отчество" maxlength="15">
+        <input type="text" class="input input_number" placeholder="Номер телефона"  maxlength="13">
+        <form>
+            <button type="submit" class="send_btn" onclick="consoleInfo()"> Отправить
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
